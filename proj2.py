@@ -63,7 +63,7 @@ print("UMSI faculty directory emails\n")
 
 ### Your Problem 4 solution goes here
 def gethtml(url):
-	r = requests.get(url)
+	r = requests.get(url,headers={'User-Agent': 'SI_CLASS'})
 	soup = BeautifulSoup(r.text,"html.parser")
 	return soup
 
